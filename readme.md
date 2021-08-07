@@ -27,4 +27,5 @@ Todos:
 - add Babel
 - create webpack config for dev and production
 - setup webpack dev server
+- add SASS processor
 - 

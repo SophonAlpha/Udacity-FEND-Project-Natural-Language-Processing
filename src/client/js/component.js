@@ -1,8 +1,7 @@
-function component() {
-    const elem = document.getElementById('placeholder');
-    elem.innerText = 'This text was added via JavaScript.'
+function doStuff() {
+    console.log('Function doStuff() was called.');
 }
 
-// It all starts here.
-document.addEventListener('DOMContentLoaded', component);
-
+export {
+    doStuff,
+}
