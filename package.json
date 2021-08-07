@@ -1,17 +1,25 @@
 {
-  "name": " ",
-  "version": "0.0.1",
-  "description": "",
-  "keywords": "",
-  "license": "",
-  "author": "",
+  "name": "udacity-fend-project-natural-language-processing",
+  "version": "1.0.0",
+  "description": "*Udacity Front End Web Developer Nanodegree Program*",
+  "private": true,
   "scripts": {
-    "build": "parcel build index.html",
-    "dev": "parcel index.html --open",
-    "start": "npm run build && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-dev": "webpack --config webpack.dev.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing/issues"
+  },
+  "homepage": "https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
   }
 }

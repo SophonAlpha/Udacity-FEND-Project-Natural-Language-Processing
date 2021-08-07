@@ -12,7 +12,19 @@ The project demonstrates the use of build tools such as webpack for a front end 
 
 To run the project install the following Node packages:
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
+```
+npm init -y
+npm install webpack webpack-cli --save-dev
 
 
 
+```
+
+
+Todos:
+
+- add Babel
+- create webpack config for dev and production
+- setup webpack dev server
+- 
