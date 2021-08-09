@@ -4,6 +4,8 @@ Useful links:
 
 - webpack guidelines:
   https://webpack.js.org/guides/development/
+- MeaningCloud
+  https://www.meaningcloud.com/
 
 */
 
