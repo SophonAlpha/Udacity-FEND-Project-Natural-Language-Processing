@@ -23,10 +23,9 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Natural Language Processing",
+            title: 'Natural Language Processing',
             template: './src/client/views/index.html',
-            favicon: './src/client/img/favicon.ico',
-        }),
-    ],
-};
-
+            favicon: './src/client/img/favicon.ico'
+      })
+    ]
+}

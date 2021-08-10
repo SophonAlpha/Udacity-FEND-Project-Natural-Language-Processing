@@ -21,7 +21,9 @@
   "homepage": "https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing#readme",
   "devDependencies": {
     "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
     "html-webpack-plugin": "^5.3.2",
+    "standard": "^16.0.3",
     "style-loader": "^3.2.1",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
@@ -29,6 +31,9 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "form-data": "^4.0.0",
     "html-to-text": "^8.0.0",
     "node-fetch": "^2.6.1"
