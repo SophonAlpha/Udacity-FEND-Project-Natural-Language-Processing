@@ -28,3 +28,7 @@ async function analyse(text) {
         console.log(error);
     }
 }
+
+module.exports = {
+    analyse
+}

@@ -23,13 +23,20 @@ function extract(url) {
         response.on('data', function (chunk) {
             data += chunk;
         });
-        response.on('end', async function () {
+        response.on('end', function () {
             // Return text extracted from HTML.
-            return (convert(data))
+            const text = convert(data);
+            console.log(text);
+            return (text);
         })
     });
     request.on('error', function(e) {
         console.log(e.message);
     });
     request.end();
+
+}
+
+module.exports = {
+    extract
 }

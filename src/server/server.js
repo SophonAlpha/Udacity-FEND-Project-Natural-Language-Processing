@@ -1,9 +1,16 @@
+/*
+
+Good introduction to require:
+    https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/
+
+*/
+
 // Import required packages.
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const { extract } = require('./extract');
-const { analyse } = require('./analyse');
+const extract = require('./extract');
+const analyse = require('./analyse');
 
 // Set up instance of Express app.
 const app = express();
@@ -12,12 +19,13 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Set path to static web content.
-app.use(express.static('dist'));
+app.use(express.static('../../dist'));
 
-app.post('/analyse', function(req, response) {
+app.get('/analyse', function(req, response) {
     // TODO: add call to extract and analyse module
-    extract('https://edition.cnn.com/2021/08/07/asia/pakistan-noor-mukadam-murder-intl-hnk-dst/index.html');
-    response.send();
+    const text = extract.extract('https://www.bbc.com/sport/cycling/58157072');
+    console.log(text);
+    response.send(text);
 })
 
 // Set up and start our server.
