@@ -1,0 +1,51 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container--center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container--column {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: xx-large;
+  color: white;
+  background-color: black;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  /*padding: 10px 20px 10px 20px;*/
+}
+
+.input-field__button-box {
+  padding: 0;
+}
+
+.debug-border--red {
+  border: red 1px solid;
+}
+
+.debug-border--blue {
+  border: blue 1px solid;
+}
+
+.debug-border--green {
+  border: green 1px solid;
+}

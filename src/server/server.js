@@ -11,6 +11,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const extract = require('./extract');
 const analyse = require('./analyse');
+const { log } = require('webpack-cli/lib/utils/logger')
 
 // Set up instance of Express app.
 const app = express();
@@ -23,10 +24,12 @@ app.use(express.static('../../dist'));
 
 app.get('/analyse', function(req, response) {
     // TODO: add call to extract and analyse module
-    const text = extract.extract('https://www.bbc.com/sport/cycling/58157072');
-    console.log(text);
-    response.send(text);
-})
+    extract.extract('https://material.io/components/app-bars-bottom', function(text) {
+        analyse.analyse(text, function(result) {
+            response.send(result);
+        }).then(undefined);
+    });
+});
 
 // Set up and start our server.
 const port = 3000;

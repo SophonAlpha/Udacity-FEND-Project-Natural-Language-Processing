@@ -1,6 +1,6 @@
 const { convert } = require('html-to-text');
 
-function extract(url) {
+function extract(url, callback) {
 
     const urlObj = new URL(url);
 
@@ -26,8 +26,7 @@ function extract(url) {
         response.on('end', function () {
             // Return text extracted from HTML.
             const text = convert(data);
-            console.log(text);
-            return (text);
+            callback(text);
         })
     });
     request.on('error', function(e) {

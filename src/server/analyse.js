@@ -1,10 +1,12 @@
 const fetch = require('node-fetch');
+const dotenv = require('dotenv');
 
-// MeaningCloud API
-const apiUrl = 'https://api.meaningcloud.com/sentiment-2.1';
-const apiKey = '82d9a8fb1179af21471d1219ae1e1bbb';
+dotenv.config();
 
-async function analyse(text) {
+apiUrl = process.env.apiUrl;
+apiKey = process.env.apiKey;
+
+async function analyse(text, callback) {
 
     const params = {
         'key': apiKey,
@@ -20,7 +22,7 @@ async function analyse(text) {
         });
         try {
             const data = await fetchResults.json();
-            return(data);
+            callback(data);
         } catch (error) {
             console.log(error);
         }

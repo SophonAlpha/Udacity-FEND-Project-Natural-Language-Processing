@@ -1,6 +1,17 @@
 # Project Evaluate a News Article with Natural Language Processing 
 *Udacity Front End Web Developer Nanodegree Program*
 
+TODOs:
+
+- design HTML UI
+- use SASS styles
+- adjust webpack configuration to transform SASS to CSS
+- set up babel module
+- create production webpack config
+- use service workers for offline work
+- minify for production deployment
+- deploy on AWS Beanstalk Node.js server
+
 A simple web app to analyse the content of a news article with natural language processing. The 
 user provides the URL to the article in the web form. The article content is analysed and the 
 results are shown.
