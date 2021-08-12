@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "*Udacity Front End Web Developer Nanodegree Program*",
   "private": true,
+  "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "webpack --config webpack.dev.js",
@@ -20,6 +21,9 @@
   },
   "homepage": "https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing#readme",
   "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "html-webpack-plugin": "^5.3.2",

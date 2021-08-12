@@ -1,17 +1,31 @@
-html,
 body {
   font-family: 'Roboto', sans-serif;
-}
-
-.container--center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .container--column {
   display: flex;
   flex-direction: column;
+}
+
+.container--row {
+  display: flex;
+  flex-direction: row;
+}
+
+.center {
+  justify-content: center;
+}
+
+.margin-10-20 {
+  margin: 10px 20px;
+}
+
+.pad-10 {
+  padding: 10px;
+}
+
+.max-width-900 {
+  max-width: 900px;
 }
 
 .header {
@@ -31,7 +45,6 @@ body {
 .input-field {
   display: flex;
   flex-direction: column;
-  /*padding: 10px 20px 10px 20px;*/
 }
 
 .input-field__button-box {

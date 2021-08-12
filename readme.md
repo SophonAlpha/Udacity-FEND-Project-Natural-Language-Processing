@@ -23,13 +23,16 @@ The project demonstrates the use of build tools such as webpack for a front end 
 
 To run the project install the following Node packages:
 
+Sample article URLs:
+  https://www.bbc.com/news/world-asia-58186002
+  https://www.theonion.com/toddler-cites-freedom-of-choice-in-refusal-to-use-potty-1847466497
+
+
+
 
 ```
 npm init -y
 npm install webpack webpack-cli --save-dev
-
-
-
 ```
 
 
@@ -40,7 +43,4 @@ Todos:
 - setup webpack dev server
 - add SASS processor
 
-#Test for Latex math formulas in GitHub Markdown
-
-<img src="https://render.githubusercontent.com/render/math?math=e^{i \pi} = -1">
 

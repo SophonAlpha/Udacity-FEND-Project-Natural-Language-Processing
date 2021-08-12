@@ -22,33 +22,40 @@
   <h1>Natural Language Processing</h1>
 </div>
 
-<div class="container--center">
+<div class="container--row center">
+  <div class="container--column max-width-900">
 
     <div class="input-form">
       <form>
-        <div class="container--center">
-          <p>Some instructions go here.</p>
-          <input class="input-field__text" type="text" id="url-field" name="zipcode"
+        <div class="container--column">
+          <p class="margin-10-20">Some instructions go here.</p>
+          <input class="input-field__text margin-10-20 pad-10" type="text" id="url-field" name="zipcode"
                  placeholder="Copy URl to news article here">
-          <input type="button" onclick="formSubmit()" value="Extract" class="input-field__button"
-                 id="extract">
+          <input class="margin-10-20 pad-10" type="button" onclick="Client.formSubmit()" value="Extract"
+                 class="input-field__button" id="extract">
         </div>
       </form>
     </div>
 
-  <div class="input-field">
-    <textarea class="input-field__textarea" id="text-area" name="text-area"
-              placeholder="... or copy/enter text here."></textarea>
+    <div class="container--row">
+    <textarea class="margin-10-20 pad-10" id="text-area" name="text-area"
+              placeholder="... or copy/enter text here." rows="20" cols="60"></textarea>
+      <p class="margin-10-20">
+        Some text goes here. Some text goes here. Some text goes here. Some text goes here.
+      </p>
+    </div>
+
+
   </div>
-
-
-  <div class="container--column">
-
-    <div id="placeholder"></div>
-
-  </div>
-
 </div>
+
+
+<script src="component.js"></script>
+<script>
+
+  Client.component.formSubmit();
+
+</script>
 
 </body>
 

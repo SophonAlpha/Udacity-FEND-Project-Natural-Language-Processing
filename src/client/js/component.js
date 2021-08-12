@@ -1,7 +1,5 @@
-function doStuff() {
-    console.log('Function doStuff() was called.');
+function formSubmit() {
+    document.getElementById('text-area').innerHTML = 'new text';
 }
 
-export {
-    doStuff,
-}
+export default formSubmit
