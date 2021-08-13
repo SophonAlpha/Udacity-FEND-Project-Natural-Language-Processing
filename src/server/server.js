@@ -9,6 +9,7 @@ Good introduction to require:
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 const extract = require('./extract');
 const analyse = require('./analyse');
 const { log } = require('webpack-cli/lib/utils/logger')
@@ -20,15 +21,25 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Set path to static web content.
-app.use(express.static('../../dist'));
+app.use(express.static('dist'));
 
-app.get('/analyse', function(req, response) {
-    // TODO: add call to extract and analyse module
-    extract.extract('https://material.io/components/app-bars-bottom', function(text) {
-        analyse.analyse(text, function(result) {
-            response.send(result);
-        }).then(undefined);
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, '../../dist/index.html'));
+})
+
+app.get('/extract', function(req, response) {
+    const url = req.query['url']
+    console.log(url);
+    extract.extract(url, function(text) {
+        response.send(JSON.stringify({ text: text }));
     });
+});
+
+app.post('/analyse', function(req, response) {
+    const text = req.body['text'];
+    analyse.analyse(text, function (result) {
+        response.send(JSON.stringify(result));
+    }).then(undefined)
 });
 
 // Set up and start our server.

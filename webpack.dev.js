@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+    watch: true,
     entry: './src/client/client.js',
     output: {
         filename: 'bundle.js',
@@ -11,13 +12,14 @@ module.exports = {
             name: 'client',
             type: 'umd',
         },
-        clean: true
+        // clean: true
     },
     mode: 'development',
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
-        injectClient: false,    // this setting solved the issue described here https://github.com/webpack/webpack-dev-server/issues/2484
+        injectClient: false,  // this setting solved the issue described
+                              // here https://github.com/webpack/webpack-dev-server/issues/2484
     },
     module: {
         rules: [

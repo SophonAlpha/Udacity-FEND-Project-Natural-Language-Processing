@@ -13,6 +13,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
         rel="stylesheet">
+  <!-- Bootstrap library for spinner -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </head>
 
@@ -28,9 +33,10 @@
     <div class="input-form">
       <form>
         <div class="container--column">
-          <p class="margin-10-20 margin-top-20">Some instructions go here.</p>
-          <input class="input-field__text margin-10-20 pad-10" type="text" id="url-field" name="zipcode"
-                 placeholder="Copy URl to news article here">
+          <p class="margin-10-20 margin-top-20">Some instructions go here. Blah blah bla.</p>
+          <input class="input-field__text margin-10-20 pad-10" type="text" id="url-field" name="url"
+                 placeholder="Copy URL to news article here">
+          <p class="error" id="error"></p>
           <input class="margin-10-20 pad-10" type="button"
                  onclick="client.component.formSubmit()" value="Extract"
                  class="input-field__button" id="extract">
@@ -41,9 +47,41 @@
     <div class="container--row">
     <textarea class="margin-10-20 pad-10" id="text-area" name="text-area"
               placeholder="... or copy/enter text here." rows="20" cols="60"></textarea>
-      <p class="margin-10-20">
-        Some text goes here. Some text goes here. Some text goes here. Some text goes here.
-      </p>
+      <div class="container--column margin-10-20">
+        <p class="pad-bottom-1em">
+          Results from sentiment analysis with <a href="https://www.meaningcloud.com"
+                                                  target="_blank">MeaningCloud</a>
+        </p>
+        <div class="container--relative">
+          <div class="table">
+            <div class="table-row">
+              <div class="table-cell">Model:</div>
+              <div class="table-cell" id="analysis-model"></div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">Score tag:</div>
+              <div class="table-cell" id="analysis-score-tag"></div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">Agreement:</div>
+              <div class="table-cell" id="analysis-agreement"></div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">Subjectivity:</div>
+              <div class="table-cell" id="analysis-subjectivity"></div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">Confidence:</div>
+              <div class="table-cell" id="analysis-confidence"></div>
+            </div>
+            <div class="table-row">
+              <div class="table-cell">Irony:</div>
+              <div class="table-cell" id="analysis-irony"></div>
+            </div>
+          </div>
+          <div class="spinner-border text-muted spinner-pos spinner__hidden" id="spinner"></div>
+        </div>
+      </div>
     </div>
 
   </div>

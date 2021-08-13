@@ -20,6 +20,11 @@ body {
   margin: 10px 20px;
 }
 
+.error {
+  margin: 0 20px 10px 20px;
+  color: crimson;
+}
+
 .margin-top-20 {
   margin-top: 20px;
 }
@@ -28,8 +33,47 @@ body {
   padding: 10px;
 }
 
+.pad-bottom-1em {
+  padding-bottom: 1em;
+}
+
 .max-width-900 {
   max-width: 900px;
+}
+
+.table {
+  display: table;
+  border-collapse: collapse;
+}
+
+.table .table-row {
+  display: table-row;
+}
+
+.table .table-cell {
+  display: table-cell;
+  text-align: left;
+  vertical-align: top;
+  padding: 0 1em 1em 0;
+}
+
+.table .table-cell:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.container--relative {
+  position: relative;
+}
+
+.spinner-pos {
+  position: absolute;
+  top: 5em;
+  left: 9em;
+}
+
+.spinner__hidden {
+  visibility: hidden;
 }
 
 .header {
