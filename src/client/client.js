@@ -17,5 +17,6 @@ import '../client/styles/resets.css';
 import '../client/styles/styles.css';
 
 export {
-    component
+    component,
 };
+

@@ -17,6 +17,7 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         contentBase: './dist',
+        injectClient: false,    // this setting solved the issue described here https://github.com/webpack/webpack-dev-server/issues/2484
     },
     module: {
         rules: [

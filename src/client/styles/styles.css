@@ -20,6 +20,10 @@ body {
   margin: 10px 20px;
 }
 
+.margin-top-20 {
+  margin-top: 20px;
+}
+
 .pad-10 {
   padding: 10px;
 }
