@@ -31,7 +31,8 @@
           <p class="margin-10-20">Some instructions go here.</p>
           <input class="input-field__text margin-10-20 pad-10" type="text" id="url-field" name="zipcode"
                  placeholder="Copy URl to news article here">
-          <input class="margin-10-20 pad-10" type="button" onclick="Client.formSubmit()" value="Extract"
+          <input class="margin-10-20 pad-10" type="button"
+                 onclick="client.component.formSubmit()" value="Extract"
                  class="input-field__button" id="extract">
         </div>
       </form>
@@ -45,17 +46,8 @@
       </p>
     </div>
 
-
   </div>
 </div>
-
-
-<script src="component.js"></script>
-<script>
-
-  Client.component.formSubmit();
-
-</script>
 
 </body>
 

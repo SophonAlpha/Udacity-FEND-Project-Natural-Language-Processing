@@ -6,19 +6,16 @@ Useful links:
   https://webpack.js.org/guides/development/
 - MeaningCloud
   https://www.meaningcloud.com/
+- Authoring Libraries
+  How to work with the output.library.name and output.library.type parameters.
+  https://webpack.js.org/guides/author-libraries/#authoring-a-library
 
 */
 
-import formSubmit from './js/component'
+import * as component from './js/component'
 import '../client/styles/resets.css';
 import '../client/styles/styles.css';
 
 export {
-    formSubmit
+    component
 };
-
-export function hello(name) {
-  console.log(`hello ${name}`);
-}
-
-

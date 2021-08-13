@@ -1,27 +1,20 @@
 
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-    entry: {
-      bundle: './src/client/client.js',
-      component: './src/client/js/component.js',
-    },
+    entry: './src/client/client.js',
     output: {
-        filename: '[name].js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        library: ['Client', '[name]'],
-        // libraryTarget: 'umd',
-
-        // library: {
-        //     name: 'Client',
-        //     type: 'var'
-        // },
+        library: {
+            name: 'client',
+            type: 'umd',
+        },
         clean: true
     },
     mode: 'development',
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         contentBase: './dist',
     },
