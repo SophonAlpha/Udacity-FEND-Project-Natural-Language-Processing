@@ -29,7 +29,6 @@ app.get('/', function (req, res) {
 
 app.get('/extract', function(req, response) {
     const url = req.query['url']
-    console.log(url);
     extract.extract(url, function(text) {
         response.send(JSON.stringify({ text: text }));
     });

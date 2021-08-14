@@ -12,9 +12,9 @@ Useful links:
 
 */
 
-import * as component from './js/component'
-import '../client/styles/resets.css';
-import '../client/styles/styles.css';
+import * as component from './component'
+import '../styles/resets.css';
+import '../styles/styles.css';
 
 export {
     component,

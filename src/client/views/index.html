@@ -28,12 +28,25 @@
 </div>
 
 <div class="container--row center">
-  <div class="container--column max-width-900">
+  <div class="container--column max-width-700">
 
     <div class="input-form">
       <form>
         <div class="container--column">
-          <p class="margin-10-20 margin-top-20">Some instructions go here. Blah blah bla.</p>
+          <p class="margin-10-20 margin-top-20">Welcome to the sentiment analysis web app!</p>
+          <p class="margin-10-20">In the input field below copy the URL to a news article
+            and press the "Extract" button. In the large text field below you can edit the text
+            extracted from the website. Alternatively you can enter any text you wish to
+            analyse directly in the large text field below.</p>
+          <p class="margin-10-20">A few examples to get you going:</p>
+          <ul class="margin-10-20 list">
+            <li class="list-item">https://www.theonion.com/toddler-cites-freedom-of-choice-in-refusal-to-use-potty-1847466497</li>
+            <li class="list-item">"The blind leading the blind."</li>
+            <li class="list-item">"Main dishes were quite good, but desserts were too sweet for me."</li>
+            <li class="list-item">"The restaurant was great even though it’s not near Madrid."</li>
+          </ul>
+
+
           <input class="input-field__text margin-10-20 pad-10" type="text" id="url-field" name="url"
                  placeholder="Copy URL to news article here">
           <p class="error" id="error"></p>
@@ -45,9 +58,9 @@
     </div>
 
     <div class="container--row">
-    <textarea class="margin-10-20 pad-10" id="text-area" name="text-area"
-              placeholder="... or copy/enter text here." rows="20" cols="60"></textarea>
-      <div class="container--column margin-10-20">
+    <textarea class="margin-10-20 pad-10 fl-gr-3" id="text-area" name="text-area"
+              placeholder="... or copy/enter text here." rows="20" cols="20"></textarea>
+      <div class="container--column margin-10-20 fl-gr-1 max-width-250">
         <p class="pad-bottom-1em">
           Results from sentiment analysis with <a href="https://www.meaningcloud.com"
                                                   target="_blank">MeaningCloud</a>

@@ -5,9 +5,10 @@
   "private": true,
   "main": "dist/bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test-coverage":  "jest --coverage",
     "build-dev": "webpack --config webpack.dev.js",
-    "start-dev": "webpack serve --config webpack.dev.js --open"
+    "node-dev": "concurrently \"webpack --config webpack.dev.js\" \"sleepms 3000 && nodemon ./src/server/server.js\" \"sleepms 5000 && opener http://localhost:3000\""
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,16 @@
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
     "babel-loader": "^8.2.2",
+    "concurrently": "^6.2.1",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "jest-fetch-mock": "^3.0.3",
+    "jsdom": "^17.0.0",
     "nodemon": "^2.0.12",
+    "opener": "^1.5.2",
+    "sleep-ms": "^2.0.1",
     "standard": "^16.0.3",
     "style-loader": "^3.2.1",
     "webpack": "^5.49.0",

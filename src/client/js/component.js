@@ -6,13 +6,13 @@ const inputTimeOut = 600
 export function formSubmit () {
   const url = document.getElementById('url-field').value
   if (validUrl(url)) {
-    extract(url)
+    return extract(url)
   } else {
     document.getElementById('error').innerHTML = 'Please enter a valid URL.';  // show error message
   }
 }
 
-function validUrl(url) {
+export function validUrl(url) {
   try {
     const dummy = new URL(url);
     return true;
@@ -22,11 +22,11 @@ function validUrl(url) {
   }
 }
 
-function extract (url) {
+function extract(url) {
   const queryStr = {
     url: url
   }
-  fetch('/extract?' + new URLSearchParams(queryStr))
+  return fetch('/extract?' + new URLSearchParams(queryStr))
     .then(response => response.json())
     .then(text => {
       document.getElementById('text-area').value = text['text']
@@ -59,7 +59,7 @@ function textChanged () {
   const postData = {
     text: document.getElementById('text-area').value,
   }
-  fetch('/analyse', {
+  return fetch('/analyse', {
     method: 'POST',
     credentials: 'same-origin',
     headers: {
@@ -83,7 +83,7 @@ function urlTextChanged() {
 
 function displayData(jsonData) {
   document.getElementById('analysis-model').innerHTML = jsonData['model'];
-  document.getElementById('analysis-score-tag').innerHTML = jsonData['score_tag'];
+  document.getElementById('analysis-score-tag').innerHTML = scoreTagMap(jsonData['score_tag']);
   document.getElementById('analysis-agreement').innerHTML = jsonData['agreement'];
   document.getElementById('analysis-subjectivity').innerHTML = jsonData['subjectivity'];
   document.getElementById('analysis-confidence').innerHTML = jsonData['confidence'];
@@ -91,14 +91,26 @@ function displayData(jsonData) {
 }
 
 function clearData() {
-  document.getElementById('analysis-model').innerHTML = '';
-  document.getElementById('analysis-score-tag').innerHTML = '';
-  document.getElementById('analysis-agreement').innerHTML = '';
-  document.getElementById('analysis-subjectivity').innerHTML = '';
-  document.getElementById('analysis-confidence').innerHTML = '';
-  document.getElementById('analysis-irony').innerHTML = '';
+  document.getElementById('analysis-model').innerHTML = ' ';
+  document.getElementById('analysis-score-tag').innerHTML = ' ';
+  document.getElementById('analysis-agreement').innerHTML = ' ';
+  document.getElementById('analysis-subjectivity').innerHTML = ' ';
+  document.getElementById('analysis-confidence').innerHTML = ' ';
+  document.getElementById('analysis-irony').innerHTML = ' ';
 }
 
 function toggleSpinner() {
   document.getElementById('spinner').classList.toggle('spinner__hidden');
+}
+
+function scoreTagMap(score) {
+  const scoreMap = {
+    'P+': 'strong positive',
+    'P': 'positive',
+    'NEU': 'neutral',
+    'N': 'negative',
+    'N+': 'strong negative',
+    'NONE': 'without sentiment',
+  }
+  return scoreMap[score];
 }

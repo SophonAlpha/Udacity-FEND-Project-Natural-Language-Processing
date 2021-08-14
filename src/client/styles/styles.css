@@ -12,6 +12,18 @@ body {
   flex-direction: row;
 }
 
+.fl-gr-1 {
+  flex-grow: 1;
+}
+
+.fl-gr-2 {
+  flex-grow: 2;
+}
+
+.fl-gr-3 {
+  flex-grow: 3;
+}
+
 .center {
   justify-content: center;
 }
@@ -37,8 +49,22 @@ body {
   padding-bottom: 1em;
 }
 
-.max-width-900 {
-  max-width: 900px;
+.list {
+  list-style-type: circle;
+  font-size: small;
+}
+
+.list-item {
+  margin-left: 1em;
+  margin-bottom: 0.7em;
+}
+
+.max-width-700 {
+  max-width: 700px;
+}
+
+.max-width-250 {
+  max-width: 250px;
 }
 
 .table {

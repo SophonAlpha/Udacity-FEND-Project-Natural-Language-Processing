@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     watch: true,
-    entry: './src/client/client.js',
+    entry: './src/client/js/client.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
@@ -29,6 +29,7 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
+                // TODO: add SASS processing
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },

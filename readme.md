@@ -43,4 +43,11 @@ Todos:
 - setup webpack dev server
 - add SASS processor
 
+Sources used during the project:
 
+- [Jest Tutorial for Beginners: Getting Started With JavaScript Testing](https://www.valentinog.com/blog/jest/)
+- [Testing with Node, Jest, and JSDOM](https://freecontent.manning.com/testing-with-node-jest-and-jsdom/)
+- [How To Mock Fetch in Jest | Leigh Halliday](https://www.leighhalliday.com/mock-fetch-jest)
+- [Jest Fetch Mock](https://www.npmjs.com/package/jest-fetch-mock#mocking-multiple-fetches-with-different-responses)
+- [Testing Asynchronous Code](https://jestjs.io/docs/asynchronous)
+- 
