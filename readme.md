@@ -61,3 +61,9 @@ Useful links:
 - Authoring Libraries
   How to work with the output.library.name and output.library.type parameters.
   https://webpack.js.org/guides/author-libraries/#authoring-a-library
+
+Good introduction to require:
+    https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/
+- How to test Express.js with Jest and Supertest
+  https://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
+- 

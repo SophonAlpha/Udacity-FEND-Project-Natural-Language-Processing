@@ -1,10 +1,11 @@
 const fetch = require('node-fetch');
 const dotenv = require('dotenv');
+const path = require('path');
 
-dotenv.config();
+dotenv.config({path: path.resolve(__dirname, '.env')});
 
-apiUrl = process.env.apiUrl;
-apiKey = process.env.apiKey;
+const apiUrl = process.env.apiUrl;
+const apiKey = process.env.apiKey;
 
 async function analyse(text, callback) {
 
