@@ -12,12 +12,11 @@ export function formSubmit () {
   }
 }
 
-export function validUrl(url) {
+function validUrl(url) {
   try {
     const dummy = new URL(url);
     return true;
   } catch (error) {
-    console.error(error);
     return false;
   }
 }

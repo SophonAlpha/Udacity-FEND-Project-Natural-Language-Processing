@@ -50,4 +50,14 @@ Sources used during the project:
 - [How To Mock Fetch in Jest | Leigh Halliday](https://www.leighhalliday.com/mock-fetch-jest)
 - [Jest Fetch Mock](https://www.npmjs.com/package/jest-fetch-mock#mocking-multiple-fetches-with-different-responses)
 - [Testing Asynchronous Code](https://jestjs.io/docs/asynchronous)
-- 
+
+
+Useful links:
+
+- webpack guidelines:
+  https://webpack.js.org/guides/development/
+- MeaningCloud
+  https://www.meaningcloud.com/
+- Authoring Libraries
+  How to work with the output.library.name and output.library.type parameters.
+  https://webpack.js.org/guides/author-libraries/#authoring-a-library
