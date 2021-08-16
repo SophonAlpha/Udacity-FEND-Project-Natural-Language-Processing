@@ -20,8 +20,6 @@ test('GET /extract', () => {
     .query({ url: 'https://www.theonion.com/toddler-cites-freedom-of-choice-in-refusal-to-use-potty-1847466497' })
     .then(response => {
       expect(response.statusCode).toBe(200);
-      expect(response.text).toContain('<title>Natural Language Processing</title>');
+      expect(response.text).toContain('test dummy data');
     });
 });
-
-

@@ -66,4 +66,6 @@ Good introduction to require:
     https://www.freecodecamp.org/news/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8/
 - How to test Express.js with Jest and Supertest
   https://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/
+- The only 3 steps you need to mock an API call in Jest
+- https://zaklaughton.dev/blog/the-only-3-steps-you-need-to-mock-an-api-call-in-jest/
 - 
