@@ -1,9 +1,15 @@
-import * as testData from '../client/js/component.testData'
-
+import fetchMock from 'jest-fetch-mock';
+fetchMock.enableMocks();
 const request = require('supertest');
 const path = require('path');
 const app = require(path.resolve(__dirname, 'app'));
-const { response } = require('express')
+import * as testData from './app.test.data';
+const axios = require('axios');
+jest.mock('axios');
+
+beforeEach(() => {
+  fetch.mockClear();
+});
 
 test('GET /', () => {
   return request(app)
@@ -15,11 +21,25 @@ test('GET /', () => {
 });
 
 test('GET /extract', () => {
+  axios.get.mockResolvedValue(testData.testExtract);
   return request(app)
     .get('/extract')
-    .query({ url: 'https://www.theonion.com/toddler-cites-freedom-of-choice-in-refusal-to-use-potty-1847466497' })
+    .query({ url: 'dummy' })
     .then(response => {
       expect(response.statusCode).toBe(200);
-      expect(response.text).toContain('test dummy data');
+      expect(response.text).toContain(testData.testExtractExpected);
     });
+});
+
+test('GET /analyse', () => {
+  fetch
+    .once(JSON.stringify(testData.testAnalyse));
+  return request(app)
+    .post('/analyse')
+    .send({ text: 'dummy' })
+    .then(response => {
+      expect(response.statusCode).toBe(200);
+      expect(response.text).toContain(JSON.stringify(testData.testAnalyse));
+    })
+    .catch(err => done(err));
 });

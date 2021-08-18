@@ -7,7 +7,7 @@ fetchMock.enableMocks();
 window.document.body.innerHTML = fs.readFileSync(
   path.resolve(__dirname, '../../../dist/index.html'));
 const component = require('./component.js');
-import * as testData from './component.testData';
+import * as testData from './component.test.data';
 
 beforeEach(() => {
   fetch.mockClear();
