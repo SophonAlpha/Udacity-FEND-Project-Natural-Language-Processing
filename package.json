@@ -1,14 +1,19 @@
 {
   "name": "udacity-fend-project-natural-language-processing",
+  "sideEffects": [
+    "*.scss"
+  ],
   "version": "1.0.0",
   "description": "*Udacity Front End Web Developer Nanodegree Program*",
   "private": true,
   "main": "dist/bundle.js",
   "scripts": {
+    "build-dev": "webpack --config webpack.dev.js",
+    "node-dev": "concurrently \"webpack --config webpack.dev.js\" \"sleepms 3000 && nodemon ./src/server/server.js\" \"sleepms 5000 && opener http://localhost:3000\"",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "build-dev": "webpack --config webpack.dev.js",
-    "node-dev": "concurrently \"webpack --config webpack.dev.js\" \"sleepms 3000 && nodemon ./src/server/server.js\" \"sleepms 5000 && opener http://localhost:3000\""
+    "build-prod": "webpack --config webpack.prod.js",
+    "node-prod": "concurrently \"webpack --config webpack.prod.js\" \"sleepms 3000 && node ./src/server/server.js\" \"sleepms 5000 && opener http://localhost:3000\""
   },
   "repository": {
     "type": "git",
@@ -33,16 +38,20 @@
     "jest": "^27.0.6",
     "jest-fetch-mock": "^3.0.3",
     "jsdom": "^17.0.0",
+    "mini-css-extract-plugin": "^2.2.0",
+    "node-sass": "^6.0.1",
     "nodemon": "^2.0.12",
     "opener": "^1.5.2",
     "regenerator-runtime": "^0.13.9",
+    "sass-loader": "^12.1.0",
     "sleep-ms": "^2.0.1",
     "standard": "^16.0.3",
     "style-loader": "^3.2.1",
     "supertest": "^6.1.5",
     "webpack": "^5.49.0",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
   },
   "dependencies": {
     "axios": "^0.21.1",

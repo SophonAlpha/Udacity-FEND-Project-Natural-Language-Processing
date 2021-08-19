@@ -1,7 +1,6 @@
-
 import * as component from './component'
-import '../styles/resets.css';
-import '../styles/styles.css';
+import '../styles/resets.scss';
+import '../styles/styles.scss';
 
 export {
     component,
