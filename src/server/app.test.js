@@ -1,3 +1,8 @@
+// This 'regenerator-runtime' import was added because of this error
+//     "ReferenceError: regeneratorRuntime is not defined"
+// Recommended solution: https://stackoverflow.com/questions/42535270/regeneratorruntime-is-not-defined-when-running-jest-test
+import 'regenerator-runtime/runtime'
+
 import fetchMock from 'jest-fetch-mock';
 fetchMock.enableMocks();
 const request = require('supertest');
@@ -31,15 +36,12 @@ test('GET /extract', () => {
     });
 });
 
-test('GET /analyse', () => {
-  fetch
-    .once(JSON.stringify(testData.testAnalyse));
-  return request(app)
+test('GET /analyse', async () => {
+  fetch.once(JSON.stringify(testData.testAnalyse));
+  const response = await request(app)
     .post('/analyse')
     .send({ text: 'dummy' })
-    .then(response => {
-      expect(response.statusCode).toBe(200);
-      expect(response.text).toContain(JSON.stringify(testData.testAnalyse));
-    })
     .catch(err => done(err));
+  expect(response.statusCode).toBe(200);
+  expect(response.text).toContain(JSON.stringify(testData.testAnalyse));
 });
