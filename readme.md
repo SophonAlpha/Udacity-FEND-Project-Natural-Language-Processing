@@ -11,7 +11,8 @@ results are shown. The project demonstrates the use of build tools such as webpa
 development.
 
 <p align="center">
-  <img src="doc/screenshot.png" width="400">
+  <img style="border:1px solid black;"
+       src="doc/screenshot.png" width="400">
 </p>
 <p align="center"><em>Sample screenshot</em></p>
 
