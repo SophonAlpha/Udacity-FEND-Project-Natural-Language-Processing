@@ -10,11 +10,10 @@ user provides the URL to the article in the web form. The article content is ana
 results are shown. The project demonstrates the use of build tools such as webpack for a front end
 development.
 
-<p align="center">
-    <img src="doc/screenshot.png" width="400" title="Sample screenshot">
-    <figcaption>Sample screenshot</figcaption>
-</p>
-<p align="center">Sample screenshot</p>
+<figure style="display: block; text-align: center">
+  <img src="doc/screenshot.png" width="400">
+  <figcaption align="center">Sample screenshot</figcaption>
+</figure>
 
 With the webpack `mode: 'production'` setting the number and size of the application files was 
 significantly reduced.
