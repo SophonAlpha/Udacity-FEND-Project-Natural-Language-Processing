@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: './src/client/js/client.js',
@@ -34,5 +35,6 @@ module.exports = {
       favicon: './src/client/img/favicon.ico',
     }),
     new MiniCssExtractPlugin(),
+    new WorkboxPlugin.GenerateSW(),
   ],
 };

@@ -3,7 +3,6 @@
 
 TODOs:
 
-- use service workers for offline work
 - deploy on AWS Beanstalk Node.js server
 
 A simple web app to analyse the content of a news article with natural language processing. The 
@@ -14,6 +13,40 @@ development.
 ![Sample screen shot](doc/screenshot.png)
 *Sample screenshot*
 
+With the webpack `mode: 'production'` setting the number and size of the application files was 
+significantly reduced.
+
+Number and size of files in development mode:
+
+```shell
+21/08/2021  13:41    <DIR>          .
+21/08/2021  13:41    <DIR>          ..
+21/08/2021  13:41            10,355 bundle.js
+21/08/2021  13:41            12,586 bundle.js.map
+21/08/2021  13:41               766 favicon.ico
+21/08/2021  13:41             4,540 index.html
+21/08/2021  13:41             3,588 main.css
+21/08/2021  13:41             4,336 main.css.map
+21/08/2021  13:41             3,606 service-worker.js
+21/08/2021  13:41             2,175 service-worker.js.map
+21/08/2021  13:41           118,642 workbox-f96f0f89.js
+21/08/2021  13:41           195,196 workbox-f96f0f89.js.map
+              10 File(s)        355,790 bytes
+```
+
+Number and size of files in production mode:
+
+```shell
+21/08/2021  13:43    <DIR>          .
+21/08/2021  13:43    <DIR>          ..
+21/08/2021  13:43             3,506 bundle.js
+21/08/2021  13:43               766 favicon.ico
+21/08/2021  13:43             3,637 index.html
+21/08/2021  13:43             2,099 main.css
+21/08/2021  13:43             1,202 service-worker.js
+21/08/2021  13:43            13,938 workbox-2fdebd44.js
+               6 File(s)         25,148 bytes
+```
 
 ## Useful readings used during the project:
 
@@ -27,3 +60,5 @@ development.
 - [How To Mock Fetch in Jest | Leigh Halliday](https://www.leighhalliday.com/mock-fetch-jest)
 - [How to test Express.js with Jest and Supertest](https://www.albertgao.xyz/2017/05/24/how-to-test-expressjs-with-jest-and-supertest/)
 - [The only 3 steps you need to mock an API call in Jest](https://zaklaughton.dev/blog/the-only-3-steps-you-need-to-mock-an-api-call-in-jest/)
+- [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
+- [Generate a Service Worker with Webpack](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack)
