@@ -12,6 +12,7 @@ development.
 
 <p align="center">
     <img src="doc/screenshot.png" width="400" title="Sample screenshot">
+    <figcaption>Sample screenshot</figcaption>
 </p>
 <p align="center">Sample screenshot</p>
 
