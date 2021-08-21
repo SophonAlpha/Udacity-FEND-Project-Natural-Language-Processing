@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WorkboxPlugin = require('workbox-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/client/js/client.js',
@@ -36,5 +37,11 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new WorkboxPlugin.GenerateSW(),
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, './src/server/.env'),
+          to: path.resolve(__dirname, './dist/')},
+      ]
+    })
   ],
 };

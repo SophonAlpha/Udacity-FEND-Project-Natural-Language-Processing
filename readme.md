@@ -61,6 +61,10 @@ npm run node-dev
 
 This will start the Node.js server and automatically open the application in your web browser.
 
+## Appendix - Deploying the application on AWS Elastic Beanstalk
+
+
+
 ## Appendix - Impact of webpack modes `development` vs `production`
 
 With the webpack `mode: 'production'` setting the number and size of the application files will be  
@@ -112,3 +116,4 @@ Number and size of files in production mode:
 - [The only 3 steps you need to mock an API call in Jest](https://zaklaughton.dev/blog/the-only-3-steps-you-need-to-mock-an-api-call-in-jest/)
 - [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
 - [Generate a Service Worker with Webpack](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack)
+- [Deploying Node.js applications to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html)
