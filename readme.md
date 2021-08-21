@@ -12,7 +12,7 @@ development.
 
 <p align="center">
     <img src="doc/screenshot.png" width="400">
-    Sample screenshot
+    <p>Sample screenshot</p>
 </p>
 
 With the webpack `mode: 'production'` setting the number and size of the application files was 
