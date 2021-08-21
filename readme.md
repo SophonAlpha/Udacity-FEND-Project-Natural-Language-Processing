@@ -1,9 +1,5 @@
-# Project Evaluate a News Article with Natural Language Processing 
+# Evaluate a News Article with Natural Language Processing 
 *Udacity Front End Web Developer Nanodegree Program*
-
-TODOs:
-
-- deploy on AWS Beanstalk Node.js server
 
 A simple web app to analyse the content of a news article with natural language processing. The 
 user provides the URL to the article in the web form. The article content is analysed and the 
@@ -14,6 +10,56 @@ development.
   <img src="doc/screenshot.png" width="400">
 </p>
 <p align="center"><em>Sample screenshot</em></p>
+
+## Project installation
+
+Run the following commands to clone and run the project. All commands are for the 
+Windows 10 operating system:
+
+```shell
+git clone https://github.com/SophonAlpha/Udacity-FEND-Project-Natural-Language-Processing.git
+cd Udacity-FEND-Project-Natural-Language-Processing
+npm install
+```
+
+Before you can run the tests or the application you need to configure your own MeaningCloud API 
+key. The key is stored in `.\src\server\.env`. The file is read by the Node js server at runtime. The 
+file has been excluded from the GitHub repository as it contains a personal API key.
+
+To create an `.env` file with your own API key copy the template file:
+
+```shell
+copy src\server\.env_tmpl src\server\.env
+```
+
+... and enter your API key:
+
+```shell
+// MeaningCloud API
+
+apiUrl=https://api.meaningcloud.com/sentiment-2.1
+apiKey=<ADD YOUR API KEY HERE>
+```
+
+Build the project:
+
+```shell
+npm run build-dev
+```
+
+Run the tests:
+
+```shell
+npm run test
+```
+
+Start the application on the local Node.js server:
+
+```shell
+npm run node-dev
+```
+
+## Appendix - Impact of webpack modes `development` vs `production`
 
 With the webpack `mode: 'production'` setting the number and size of the application files was 
 significantly reduced.
@@ -50,7 +96,7 @@ Number and size of files in production mode:
                6 File(s)         25,148 bytes
 ```
 
-## Useful readings used during the project:
+## Appendix - Useful readings used during the project:
 
 - [MeaningCloud](https://www.meaningcloud.com/)
 - [Webpack Guidelines](https://webpack.js.org/guides/development/)
