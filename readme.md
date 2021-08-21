@@ -10,7 +10,7 @@ user provides the URL to the article in the web form. The article content is ana
 results are shown. The project demonstrates the use of build tools such as webpack for a front end
 development.
 
-<figure style="display: block; text-align: center">
+<figure style="display: block; align: center">
   <img src="doc/screenshot.png" width="400">
   <figcaption align="center">Sample screenshot</figcaption>
 </figure>
