@@ -4,7 +4,7 @@
 A simple web app to analyse the content of a news article with natural language processing. The 
 user provides the URL to the article in the web form. The article content is analysed and the 
 results are shown. The project demonstrates the use of build tools such as webpack for a front end
-development.
+development project.
 
 <p align="center">
   <img src="doc/screenshot.png" width="400">
@@ -22,8 +22,9 @@ cd Udacity-FEND-Project-Natural-Language-Processing
 npm install
 ```
 
-Before you can run the tests or the application you need to configure your own MeaningCloud API 
-key. The key is stored in `.\src\server\.env`. The file is read by the Node.js server at runtime.
+Before you can run the tests or the application you need to configure your own [MeaningCloud API 
+key](https://www.meaningcloud.com/developer/create-account). The key is stored in `.\src\server\.
+env`. The file is read by the Node.js server at runtime.
 The file has been excluded from the GitHub repository as it contains a personal API key.
 
 To create an `.env` file with your own API key copy the template file:
