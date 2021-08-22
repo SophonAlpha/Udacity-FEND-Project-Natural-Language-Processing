@@ -68,10 +68,6 @@ npm run node-dev
 
 This will start the Node.js server and automatically open the application in your web browser.
 
-## Appendix - Deploying the application on AWS Elastic Beanstalk
-
-
-
 ## Appendix - Impact of webpack modes `development` vs `production`
 
 With the webpack `mode: 'production'` setting the number and size of the application files will be  
