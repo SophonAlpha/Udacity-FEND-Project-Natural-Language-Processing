@@ -53,6 +53,12 @@ Run the tests:
 npm run test
 ```
 
+To start the application on the webpack DevServer:
+
+```shell
+npm run start-dev
+```
+
 Start the application on the local Node.js server:
 
 ```shell
