@@ -1,4 +1,4 @@
-# Evaluate a News Article with Natural Language Processing 
+# Evaluate News Articles with Natural Language Processing 
 *Udacity Front End Web Developer Nanodegree Program*
 
 A simple web app to analyse the content of a news article with natural language processing. The 
@@ -23,8 +23,8 @@ npm install
 ```
 
 Before you can run the tests or the application you need to configure your own MeaningCloud API 
-key. The key is stored in `.\src\server\.env`. The file is read by the Node js server at runtime. The 
-file has been excluded from the GitHub repository as it contains a personal API key.
+key. The key is stored in `.\src\server\.env`. The file is read by the Node.js server at runtime.
+The file has been excluded from the GitHub repository as it contains a personal API key.
 
 To create an `.env` file with your own API key copy the template file:
 
@@ -32,7 +32,7 @@ To create an `.env` file with your own API key copy the template file:
 copy src\server\.env_tmpl src\server\.env
 ```
 
-... and enter your API key:
+Open the `.env` file a text editor and enter your API key:
 
 ```shell
 // MeaningCloud API
@@ -41,7 +41,7 @@ apiUrl=https://api.meaningcloud.com/sentiment-2.1
 apiKey=<ADD YOUR API KEY HERE>
 ```
 
-Build the project:
+Build the project in development mode:
 
 ```shell
 npm run build-dev
@@ -65,9 +65,15 @@ Start the application on the local Node.js server:
 npm run node-dev
 ```
 
+This will start the Node.js server and automatically open the application in your web browser.
+
+## Appendix - Deploying the application on AWS Elastic Beanstalk
+
+
+
 ## Appendix - Impact of webpack modes `development` vs `production`
 
-With the webpack `mode: 'production'` setting the number and size of the application files was 
+With the webpack `mode: 'production'` setting the number and size of the application files will be  
 significantly reduced.
 
 Number and size of files in development mode:
@@ -116,3 +122,4 @@ Number and size of files in production mode:
 - [The only 3 steps you need to mock an API call in Jest](https://zaklaughton.dev/blog/the-only-3-steps-you-need-to-mock-an-api-call-in-jest/)
 - [Service Workers: an Introduction](https://developers.google.com/web/fundamentals/primers/service-workers/)
 - [Generate a Service Worker with Webpack](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack)
+- [Deploying Node.js applications to Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_nodejs.html)
